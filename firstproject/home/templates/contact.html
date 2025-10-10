@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block start %}
+
+    <h1>Welcome to the Contact Page 🤙📞☎️📱</h1>
+    {% comment %} <p>This is a contact page template.</p> {% endcomment %}
+    <form method="post">
+        {% csrf_token %}
+    {{ StudentFormModel.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+    {% if submitted %}
+        <p>Form submitted successfully!</p>
+    {% endif %}
+    <a href="/">Go to Home Page</a>
+
+{% endblock %}

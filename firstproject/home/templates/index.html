@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block start %}
+
+    {% comment %} <h1>Welcome to the Home Page😊😊</h1>
+    <p>This is a simple Django template.</p>
+    {{ names }} <br><br>
+    {{ items }} <br><br>
+    {{ fruits | default:"No value is provided" }} <br><br>
+
+    {% for name in names %}
+    {% if not name == 'Alok' %}
+        <li>{{ name }}</li>
+    {% endif %}
+    {% endfor%}
+
+    <a href="/contact">Go to Contact Page</a>
+    <a href="/about">Go to About Page</a> {% endcomment %}
+
+    <h1>Student Information Form</h1>
+    <form method="post">
+        {% csrf_token %}
+    {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+    {% if submitted %}
+        <p>Form submitted successfully!</p>
+    {% endif %}
+    
+{% endblock %}
