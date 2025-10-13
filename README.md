@@ -158,7 +158,3 @@ If you'd like, I can also:
 - Add a Docker Compose file that wires up Redis, RabbitMQ, Elasticsearch, and Postgres for a complete local dev environment
 - Add example environment files (.env.sample)
 - Create short README files for each example app with step-by-step exercises
-
----
-
-Happy hacking — if you want any section expanded, or want me to generate a Docker Compose and sample `.env`, tell me which services you want and I’ll add them.
