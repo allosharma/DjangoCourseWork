@@ -3,7 +3,7 @@ import uuid
 
 # Create your models here.
 class BaseModel(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, unique=True)
+    uuid = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, unique=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -21,4 +21,4 @@ class Transaction(BaseModel):
     description = models.TextField(blank=True, null=True)
 
     def __str__(self):
-        return f"{self.transaction_type.capitalize()} of {self.amount}"
+        return f"{self.description} of {self.amount} as {self.transaction_type.capitalize()}"
