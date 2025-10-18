@@ -16,9 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from home.views import index, contact
 
 urlpatterns = [
     path('', include('home.urls')),
+    path('fts/', include('fulltextsearch.urls')),
     path('admin/', admin.site.urls),
 ]
