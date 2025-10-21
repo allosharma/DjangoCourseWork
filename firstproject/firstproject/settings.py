@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 ]
 
 EXTERNAL_APPS = [
+    'django.contrib.postgres',
     'home',
     'fulltextsearch',
 ]
